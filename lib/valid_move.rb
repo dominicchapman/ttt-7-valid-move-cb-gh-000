@@ -1,12 +1,15 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
-  # if index.between?(1,9)
-  #   if !position_taken?(board, index)
-  #     true
-  #   end
-  # end
+  # move is to a position on the tic-tac-toe-board
+  # i.e. index in range of 0 to 8
 
-  index.between?(0,8) && !position_taken?(board, index)
+  # move to a vacant position
+  # i.e. position_taken? is false
+  if index.between?(0, 8) && !position_taken?(board, index)
+    return true
+  else
+    return false
+  end
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
