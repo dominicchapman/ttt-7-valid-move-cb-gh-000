@@ -5,7 +5,7 @@ def valid_move?(board, index)
 
   # move to a vacant position
   # i.e. position_taken? is false
-  if index.between(0, 8) && !position_taken?(board, index)
+  if index.between(0,8) && !position_taken?(board, index)
     true
   else
     false
